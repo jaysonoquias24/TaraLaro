@@ -1,0 +1,89 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the thumbnail header container */
+.thumbnail-header {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+}
+
+/* Styles for the thumbnail image */
+.thumbnail-image img {
+    position: relative;
+    width: 100%; /* Ensure the image covers the entire width of the container */
+   
+   
+}
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Gradient overlay with black gradient (100% opacity to 0% opacity) */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+
+/* Container for the content (title, description, and button) */
+/* Container for the content (title, description, and button) */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    z-index: 1; /* Place content above the gradient overlay */
+  width: 100%;
+ 
+  
+}
+
+
+/* Left column for title and description */
+.left-column {
+    flex: 1;
+    margin-left: 10px;
+    font-size: larger;
+}
+
+/* Right column for the "Watch Video" button */
+.right-column {
+    margin-right: 25%;    
+}
+
+/* Styles for the "Watch Video" button */
+.watch-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .right-column {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
